@@ -11,7 +11,17 @@ public class TwoSums {
      * Result - []
      */
     public int[] getTwoSum(int[] nums, int target) {
-        // Task implementation
-        return new int[]{0, 1};
+
+        int countSolutions = 0;
+
+        for (int firstNum = 0; firstNum < nums.length; firstNum++) {
+            for (int secondNum = firstNum + 1; secondNum < nums.length; secondNum++) {
+                if ((nums[firstNum] + nums[secondNum]) == target) {
+                    countSolutions++;
+                    return new int[]{nums[firstNum], nums[secondNum]};
+                }
+            }
+        }
+        return new int[]{};
     }
 }

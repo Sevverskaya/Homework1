@@ -11,7 +11,14 @@ public class ReverseInteger {
      */
 
     public int reverse(int inputNumber) {
-        //Task implementation
-        return 0;
+        int reversedNum = 0;
+
+        while (inputNumber != 0) {
+            reversedNum *= 10;
+            reversedNum += inputNumber % 10;
+            inputNumber /= 10;
+        }
+
+        return reversedNum;
     }
 }
